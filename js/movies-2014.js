@@ -6576,7 +6576,7 @@ var movies = [
     "studio":"IFC Films",
     "genre":"Comedy",
     "rating":"R",
-    "grossSales":-3103,
+    "grossSales":3103,
     "ticketsSold":498355
   }
 ];
