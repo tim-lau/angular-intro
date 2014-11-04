@@ -18,9 +18,30 @@
 
     </head>
     <body>
-        <main class="container">
+        <main class="container" ng-app="MoviesApp" ng-controller="MoviesController">
             <h1>Movies from 2014</h1>
-
+            <table class="table">
+                <tr>
+                    <th>Rank</th>
+                    <th>Title</th>
+                    <th>Release Date</th>
+                    <th>Studio</th>
+                    <th>Genre</th>
+                    <th>Rating</th>
+                    <th>Gross Sales</th>
+                    <th>Tickets Sold</th>
+                </tr>
+                <tr ng-repeat="movie in movies">
+                    <td>{{movie.rank}}</td>
+                    <td>{{movie.title}}</td>
+                    <td>{{movie.releaseDate | date : 'shortDate'}}</td>
+                    <td>{{movie.studio}}</td>
+                    <td>{{mvie.genre}}</td>
+                    <td>{{movie.rating}}</td>
+                    <td>{{movie.grossSales | currency : '$' : 0}}</td>
+                    <td>{{movie.ticketsSold}}</td>
+                </tr>
+            </table>
         </main>
 
         <!-- 2014 movie box office data (http://www.the-numbers.com/market/2014/top-grossing-movies) -->
